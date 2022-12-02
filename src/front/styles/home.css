@@ -5,3 +5,12 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+.picturesize224 {
+  height: 224px;
+  object-fit: contain;
+}
+
+.picturesize48 {
+  width: 48px;
+  height: 48px;
+}
