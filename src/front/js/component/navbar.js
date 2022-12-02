@@ -33,7 +33,7 @@ export const Navbar = () => {
             ></rect>
           </svg>
           <p className="mb-0 small fw-bold text-light">
-            Get a 20% Discount until December!
+            Get up to a 20% Discount until December!
           </p>
         </div>
       </div>
