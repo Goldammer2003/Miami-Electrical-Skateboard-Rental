@@ -282,7 +282,7 @@ export const Cards = () => (
         </div>
       </div>
       <div className="text-center">
-        <a className="btn btn-primary" href="#">
+        <a className="btn btn-primary mt-5 mb-5" href="#">
           Go To Shoping Cart
         </a>
       </div>

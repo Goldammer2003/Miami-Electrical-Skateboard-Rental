@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 export const Customerexperience = () => (
-  <footer className="footer mt-auto py-3 text-center">
+  <footer className="footer mt-auto py-3 text-center pt-5">
     <section className="py-20 overflow-hidden">
       <div className="container">
         <div className="row">
