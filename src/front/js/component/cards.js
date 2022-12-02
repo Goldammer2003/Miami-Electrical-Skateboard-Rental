@@ -67,7 +67,7 @@ export const Cards = () => (
               />
               <h5 className="mb-2">E-Skateboard - Partner Edition</h5>
               <p className="h6 text-info">
-                <span>$14.30</span>
+                <span>39.99 Dollars/Day</span>
                 <span className="">49.99 Dollars/Day</span>
               </p>
             </a>
@@ -158,7 +158,7 @@ export const Cards = () => (
               />
               <h5 className="mb-2">E-Skateboard-Rainbow Edition</h5>
               <p className="h6 text-info">
-                <span>$199.90</span>
+                <span>34.99 Dollars/Day</span>
                 <span className="small text-muted fw-normal text-decoration-line-through">
                   $33.69
                 </span>
@@ -211,7 +211,7 @@ export const Cards = () => (
               </p>
             </a>
             <a
-              className="ms-auto me-2 d-flex align-items-center justify-content-center border rounded-3 picturesize224 "
+              className="ms-auto me-2 d-flex align-items-center justify-content-center border rounded-3 picturesize48 "
               href="#"
             >
               <svg
