@@ -158,7 +158,9 @@ export const Navbar = () => {
                   strokeLinejoin="round"
                 ></path>
               </svg>
-              <span>Sign&nbsp;In</span>
+              <Link to="/signup">
+                <span>Sign&nbsp;In</span>
+              </Link>
             </a>
           </div>
           <div className="d-xl-none d-flex align-items-center justify-content-end">

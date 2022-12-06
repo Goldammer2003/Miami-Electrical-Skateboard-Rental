@@ -1,0 +1,279 @@
+import React, { Component } from "react";
+
+export const Jumbotron = () => (
+  <section className="position-relative overflow-hidden">
+    <nav className="navbar py-0 navbar-expand-lg navbar-light bg-white border-bottom">
+      <div className="container-fluid">
+        <a className="d-none d-lg-block me-16" href="#"></a>
+        <a className="navbar-brand fw-bold flex-shrink-0 py-10" href="#"></a>
+        <button className="navbar-burger navbar-toggler" type="button">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="d-none d-xl-flex navbar-collapse">
+          <a
+            className="link-dark ms-auto ms-xl-0 me-10 text-decoration-none"
+            href="#"
+          ></a>
+          <a
+            className="link-dark me-12 text-decoration-none d-flex align-items-center"
+            href="#"
+          ></a>
+          <a
+            className="link-dark align-self-stretch py-10 px-10 border-start text-decoration-none d-flex align-items-center fw-bold"
+            href="#"
+          ></a>
+          <a
+            className="d-lg-none d-flex me-6 align-items-center text-secondary"
+            href="#"
+          >
+            <svg
+              className="me-2"
+              width="23"
+              height="23"
+              viewBox="0 0 23 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.1159 8.72461H2.50427C1.99709 8.72461 1.58594 9.12704 1.58594 9.62346V21.3085C1.58594 21.8049 1.99709 22.2074 2.50427 22.2074H18.1159C18.6231 22.2074 19.0342 21.8049 19.0342 21.3085V9.62346C19.0342 9.12704 18.6231 8.72461 18.1159 8.72461Z"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>
+              <path
+                d="M6.34473 6.34469V4.95676C6.34473 3.85246 6.76252 2.79338 7.5062 2.01252C8.24988 1.23165 9.25852 0.792969 10.3102 0.792969C11.362 0.792969 12.3706 1.23165 13.1143 2.01252C13.858 2.79338 14.2758 3.85246 14.2758 4.95676V6.34469"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>
+            </svg>
+            <span
+              className="d-inline-block text-center bg-white rounded-circle fw-bold"
+              style={{ width: "24px", height: "24px" }}
+            >
+              3
+            </span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div className="position-relative">
+      <img
+        className="position-absolute top-0 start-0 d-none d-md-block col-12 col-md-5 col-lg-6"
+        style={{ height: "680px", objectFit: "cover" }}
+        src="https://static.shuffle.dev/uploads/files/f3/f3a7e512c9216c316e6bdb267d859cb3b15861dd/1-tqqQGzEI0UL9pn4FK5Vufw.jpeg"
+        alt=""
+      ></img>
+      <div className="container pb-20 pb-lg-7">
+        <div className="position-relative col-12 col-md-6 px-4 ms-auto">
+          <div className="mw-md mx-auto pt-16 pt-lg-28 pb-lg-40">
+            <span className="badge bg-white border border-info text-info text-uppercase fw-bold rounded-pill">
+              The Greatest
+            </span>
+            <h1 className="mt-6 mb-8">
+              Ride into Miami's Sunsets with E-Skateboards
+            </h1>
+            <p className="mb-20 h6 fw-normal text-muted">
+              Learn E-Skating in less than 15 min{" "}
+            </p>
+            <a className="btn btn-primary" href="#">
+              View Products
+            </a>
+          </div>
+          <div className="d-none d-lg-flex position-absolute end-0 top-50 translate-middle flex-column align-items-center">
+            <span className="mb-5 fw-bold">01</span>
+            <div
+              className="mb-5 bg-light"
+              style={{ height: "64px", width: "1px" }}
+            ></div>
+            <button className="mb-5 btn p-0">
+              <img
+                className="img-fluid"
+                src="yofte-assets/elements/circle.svg"
+                alt=""
+              ></img>
+            </button>
+            <button
+              className="mb-6 btn p-0 bg-info rounded-circle"
+              style={{ width: "4px", height: "4px" }}
+            ></button>
+            <button
+              className="mb-6 btn p-0 bg-info rounded-circle"
+              style={{ width: "4px", height: "4px" }}
+            ></button>
+            <div
+              className="bg-light"
+              style={{ height: "64px", width: "1px" }}
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div className="py-20 bg-light">
+        <div className="row mb-20 ms-lg-32 align-items-end">
+          <div className="col-12 col-md-6 col-xl-3 mb-6 mb-xl-0"></div>
+          <div className="col-12 col-md-6 col-xl-3 mb-6 mb-xl-0"></div>
+          <div className="col-12 col-md-6 col-xl-3 mb-6 mb-xl-0"></div>
+          <div className="col-12 col-md-6 col-xl-3 mb-6 mb-xl-0"></div>
+        </div>
+        <div className="mw-5xl mx-auto row align-items-center mb-n12">
+          <div className="col-6 col-md-4 col-lg-2 mb-12"></div>
+          <div className="col-6 col-md-4 col-lg-2 mb-12"></div>
+          <div className="col-6 col-md-4 col-lg-2 mb-12"></div>
+          <div className="col-6 col-md-4 col-lg-2 mb-12"></div>
+          <div className="col-6 col-md-4 col-lg-2 mb-12"></div>
+          <div className="col-6 col-md-4 col-lg-2 mb-12"></div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="navbar-menu d-none position-fixed top-0 start-0 bottom-0 w-75 mw-sm"
+      style={{ zIndex: "9999" }}
+    >
+      <div className="navbar-close position-fixed top-0 start-0 w-100 h-100 bg-dark opacity-25"></div>
+      <nav className="position-relative h-100 w-100 d-flex flex-column py-6 px-6 bg-white border-end overflow-auto">
+        <div className="d-flex align-items-center mb-8">
+          <a className="me-auto h6" href="#">
+            <img
+              className="img-fluid"
+              src="yofte-assets/logos/yofte-logo.svg"
+              alt=""
+              width="auto"
+            ></img>
+          </a>
+          <button className="navbar-close btn p-0">
+            <svg
+              className="text-secondary"
+              style={{ width: "8px", height: "8px" }}
+              width="10"
+              height="10"
+              viewBox="0 0 10 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.00002 1L1 9.00002M1.00003 1L9.00005 9.00002"
+                stroke="black"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div className="d-flex mb-8 justify-content-between">
+          <a
+            className="link-dark text-decoration-none d-inline-flex align-items-center fw-bold"
+            href="#"
+          >
+            <svg
+              className="me-3"
+              width="32"
+              height="31"
+              viewBox="0 0 32 31"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.0006 16.3154C19.1303 16.3154 21.6673 13.799 21.6673 10.6948C21.6673 7.59064 19.1303 5.07422 16.0006 5.07422C12.871 5.07422 10.334 7.59064 10.334 10.6948C10.334 13.799 12.871 16.3154 16.0006 16.3154Z"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>
+              <path
+                d="M24.4225 23.8963C23.6678 22.3507 22.4756 21.0445 20.9845 20.1298C19.4934 19.2151 17.7647 18.7295 15.9998 18.7295C14.2349 18.7295 12.5063 19.2151 11.0152 20.1298C9.52406 21.0445 8.33179 22.3507 7.57715 23.8963"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>
+            </svg>
+            <span>Sign&nbsp;In</span>
+          </a>
+          <div className="d-flex align-items-center">
+            <a className="link-dark text-decoration-none me-10" href="#">
+              <svg
+                width="23"
+                height="20"
+                viewBox="0 0 23 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.4998 19.2061L2.70115 9.92527C1.92859 9.14433 1.41864 8.1374 1.24355 7.04712C1.06847 5.95684 1.23713 4.8385 1.72563 3.85053V3.85053C2.09464 3.10462 2.63366 2.45803 3.29828 1.96406C3.9629 1.47008 4.73408 1.14284 5.5483 1.00931C6.36252 0.875782 7.19647 0.939779 7.98144 1.19603C8.7664 1.45228 9.47991 1.89345 10.0632 2.48319L11.4998 3.93577L12.9364 2.48319C13.5197 1.89345 14.2332 1.45228 15.0182 1.19603C15.8031 0.939779 16.6371 0.875782 17.4513 1.00931C18.2655 1.14284 19.0367 1.47008 19.7013 1.96406C20.3659 2.45803 20.905 3.10462 21.274 3.85053V3.85053C21.7625 4.8385 21.9311 5.95684 21.756 7.04712C21.581 8.1374 21.071 9.14433 20.2984 9.92527L11.4998 19.2061Z"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+              </svg>
+            </a>
+            <a
+              className="link-dark text-decoration-none d-flex align-items-center"
+              href="#"
+            >
+              <svg
+                className="me-3"
+                width="23"
+                height="23"
+                viewBox="0 0 23 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.1159 8.72461H2.50427C1.99709 8.72461 1.58594 9.12704 1.58594 9.62346V21.3085C1.58594 21.8049 1.99709 22.2074 2.50427 22.2074H18.1159C18.6231 22.2074 19.0342 21.8049 19.0342 21.3085V9.62346C19.0342 9.12704 18.6231 8.72461 18.1159 8.72461Z"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+                <path
+                  d="M6.34473 6.34469V4.95676C6.34473 3.85246 6.76252 2.79338 7.5062 2.01252C8.24988 1.23165 9.25852 0.792969 10.3102 0.792969C11.362 0.792969 12.3706 1.23165 13.1143 2.01252C13.858 2.79338 14.2758 3.85246 14.2758 4.95676V6.34469"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+              </svg>
+              <span
+                className="d-inline-block text-center bg-light rounded-circle fw-bold"
+                style={{ width: "24px", height: "24px" }}
+              >
+                3
+              </span>
+            </a>
+          </div>
+        </div>
+        <input
+          className="form-control mb-10 py-5 px-8 bg-light border-0"
+          type="search"
+          placeholder="Search"
+        ></input>
+        <ul className="list-unstyled mb-0 h4">
+          <li className="mb-8">
+            <a className="link-dark text-decoration-none" href="#">
+              Category
+            </a>
+          </li>
+          <li className="mb-8">
+            <a className="link-dark text-decoration-none" href="#">
+              Collection
+            </a>
+          </li>
+          <li className="mb-8">
+            <a className="link-dark text-decoration-none" href="#">
+              Story
+            </a>
+          </li>
+          <li>
+            <a className="link-dark text-decoration-none" href="#">
+              Brand
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+);
