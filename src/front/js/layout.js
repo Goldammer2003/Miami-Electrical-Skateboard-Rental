@@ -11,8 +11,9 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Cards } from "./component/cards";
 import { Customerexperience } from "./component/customerexperience";
-import { Signup } from "./component/signup";
+import { Signup } from "./pages/signup";
 import { Jumbotron } from "./component/jumbotron";
+
 //create your first component
 const Layout = () => {
   //the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -24,10 +25,10 @@ const Layout = () => {
       <BrowserRouter basename={basename}>
         <ScrollToTop>
           <Navbar />
-          <Jumbotron />
-          <Cards />
-          <Customerexperience />
+
           <Routes>
+            <Route path="/" element={<Home />} />
+
             <Route path="/signup" element={<Signup />} />
           </Routes>
           <Footer />
