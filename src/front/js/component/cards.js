@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 export const Cards = () => (
   <section className="py-20 bg-light overflow-hidden">
     <div className="container">
@@ -243,11 +243,13 @@ export const Cards = () => (
               className="d-block px-6 mt-6 mb-2 link-dark text-decoration-none"
               href="#"
             >
-              <img
-                className="mb-5 mx-auto w-100 img-fluid picturesize224"
-                src="https://images.unsplash.com/photo-1579613288371-cb0e63d5aa37?crop=entropy&amp;cs=tinysrgb&amp;fm=jpg&amp;ixid=MnwzMzIzMzB8MHwxfHNlYXJjaHwyfHxFbGVjdHJpY2FsJTIwU2thdGVib2FyZHN8ZW58MHwwfHx8MTY2OTY4NjEyMQ&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1920"
-                alt=""
-              />
+              <Link to="/detailedcardone">
+                <img
+                  className="mb-5 mx-auto w-100 img-fluid picturesize224"
+                  src="https://images.unsplash.com/photo-1579613288371-cb0e63d5aa37?crop=entropy&amp;cs=tinysrgb&amp;fm=jpg&amp;ixid=MnwzMzIzMzB8MHwxfHNlYXJjaHwyfHxFbGVjdHJpY2FsJTIwU2thdGVib2FyZHN8ZW58MHwwfHx8MTY2OTY4NjEyMQ&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1920"
+                  alt=""
+                />
+              </Link>
               <h5 className="mb-2">E-Skateboard- Onewheel Edition</h5>
               <p className="h6 text-info">
                 <span>24.99 Dollars/Day</span>
