@@ -19,7 +19,7 @@
   width: 8px;
   height: 8px;
 }
-.photojumbotron {
+.picturejumbotron {
   background: url("https://static.shuffle.dev/uploads/files/f3/f3a7e512c9216c316e6bdb267d859cb3b15861dd/1-tqqQGzEI0UL9pn4FK5Vufw.jpeg")
     50% 50% / cover no-repeat scroll padding-box border-box rgba(0, 0, 0, 0);
 }
