@@ -243,7 +243,7 @@ export const Cards = () => (
               className="d-block px-6 mt-6 mb-2 link-dark text-decoration-none"
               href="#"
             >
-              <Link to="/detailedcardone">
+              <Link to="/detailedcardsix">
                 <a>
                   <img
                     className="mb-5 mx-auto w-100 img-fluid picturesize224"
