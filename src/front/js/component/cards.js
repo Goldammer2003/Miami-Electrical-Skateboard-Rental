@@ -244,11 +244,13 @@ export const Cards = () => (
               href="#"
             >
               <Link to="/detailedcardone">
-                <img
-                  className="mb-5 mx-auto w-100 img-fluid picturesize224"
-                  src="https://images.unsplash.com/photo-1579613288371-cb0e63d5aa37?crop=entropy&amp;cs=tinysrgb&amp;fm=jpg&amp;ixid=MnwzMzIzMzB8MHwxfHNlYXJjaHwyfHxFbGVjdHJpY2FsJTIwU2thdGVib2FyZHN8ZW58MHwwfHx8MTY2OTY4NjEyMQ&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1920"
-                  alt=""
-                />
+                <a>
+                  <img
+                    className="mb-5 mx-auto w-100 img-fluid picturesize224"
+                    src="https://images.unsplash.com/photo-1579613288371-cb0e63d5aa37?crop=entropy&amp;cs=tinysrgb&amp;fm=jpg&amp;ixid=MnwzMzIzMzB8MHwxfHNlYXJjaHwyfHxFbGVjdHJpY2FsJTIwU2thdGVib2FyZHN8ZW58MHwwfHx8MTY2OTY4NjEyMQ&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1920"
+                    alt=""
+                  />
+                </a>
               </Link>
               <h5 className="mb-2">E-Skateboard- Onewheel Edition</h5>
               <p className="h6 text-info">
