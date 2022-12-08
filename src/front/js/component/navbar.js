@@ -55,22 +55,22 @@ export const Navbar = () => {
               <ul className="navbar-nav d-flex position-absolute top-50 start-50 translate-middle align-items-center">
                 <li className="nav-item me-3">
                   <a className="nav-link" href="#">
-                    Products
+                    In progress (1)
                   </a>
                 </li>
                 <li className="nav-item me-3">
                   <a className="nav-link" href="#">
-                    History
+                    In progress (2)
                   </a>
                 </li>
                 <li className="nav-item me-3">
                   <a className="nav-link" href="#">
-                    Learn E-Skating
+                    In progress (3)
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">
-                    Contact
+                    In progress (4)
                   </a>
                 </li>
               </ul>
