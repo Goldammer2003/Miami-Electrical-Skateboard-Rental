@@ -31,6 +31,7 @@ export const Cards = () => (
               className="ms-auto me-2 d-flex align-items-center justify-content-center border rounded-3 picturesize48"
               href="#"
             >
+              <button>Click Me</button>
               <svg
                 width="12"
                 height="12"
