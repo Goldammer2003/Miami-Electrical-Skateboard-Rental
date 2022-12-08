@@ -49,14 +49,13 @@ export const Signup = () => {
         </div>
         <div
           className="d-none d-lg-block position-absolute top-0 bottom-0 end-0 col-lg-6 picturesingnup"
-          //style={{
-          //backgroundImage: url(
-          //  "https://images.unsplash.com/photo-1524839438798-18cb0977aa49?crop=entropy&amp;cs=tinysrgb&amp;fm=jpg&amp;ixid=MnwzMzIzMzB8MHwxfHNlYXJjaHwxfHxFbGVjdHJpY2FsJTIwU2thdGVib2FyZGluZ3xlbnwwfHx8fDE2Njk5NTE4MjY&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1920"
-          // ),
-          // backgroundRepeat: "no-repeat",
-          //backgroundSize: "cover",
-          //backgroundPosition: "center",
-          // }}
+          style={{
+            backgroundImage: `url(${"https://images.unsplash.com/photo-1524839438798-18cb0977aa49?crop=entropy&amp;cs=tinysrgb&amp;fm=jpg&amp;ixid=MnwzMzIzMzB8MHwxfHNlYXJjaHwxfHxFbGVjdHJpY2FsJTIwU2thdGVib2FyZGluZ3xlbnwwfHx8fDE2Njk5NTE4MjY&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1920"}
+            )`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         ></div>
       </div>
     </>
