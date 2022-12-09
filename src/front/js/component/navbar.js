@@ -1,5 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faMagnifyingGlass,
+  faPerson,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import "../../styles/navbar.css";
 
 export const Navbar = () => {
   return (
@@ -42,16 +50,66 @@ export const Navbar = () => {
           <button className="navbar-burger navbar-toggler" type="button">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="position-relative d-none d-xl-flex navbar-collapse">
-            <div className="d-flex w-100 align-items-center justify-content-between">
-              <a className="navbar-brand" href="#">
-                <img
-                  className="img-fluid"
-                  src="https://th.bing.com/th/id/R.36f0046f51b7fe52a557f65ca0fea773?rik=FqEiSvD6uyofLA&riu=http%3a%2f%2fwww.calstreets.com%2fsite%2fimages%2ftetzstickers%2fimages%2fskatopia.jpg&ehk=syphm6vUtzFzDXGZhZx74gaBVajzuncF%2bB%2f%2f2HnWZWA%3d&risl=&pid=ImgRaw&r=0"
-                  alt=""
-                  width="50px"
-                ></img>
-              </a>
+          <div className="navbar-collapse">
+            <div className="d-flex align-items-center w-100 justify-content-between">
+              <div className="d-flex align-items-center">
+                <a
+                  className="navbar-brand d-flex align-items-center gap-3 py-0"
+                  href="#"
+                >
+                  <img
+                    className="img-fluid"
+                    src="https://th.bing.com/th/id/R.36f0046f51b7fe52a557f65ca0fea773?rik=FqEiSvD6uyofLA&riu=http%3a%2f%2fwww.calstreets.com%2fsite%2fimages%2ftetzstickers%2fimages%2fskatopia.jpg&ehk=syphm6vUtzFzDXGZhZx74gaBVajzuncF%2bB%2f%2f2HnWZWA%3d&risl=&pid=ImgRaw&r=0"
+                    alt=""
+                    width="50px"
+                  ></img>
+                  <h4 className="mb-0">Electical Skateboards</h4>
+                </a>
+                <div
+                  class="input-group mb-3"
+                  style={{ width: "225px", height: "20px" }}
+                >
+                  <span class="input-group-text" id="inputGroup-sizing-default">
+                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                  </span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                    placeholder="search"
+                  />
+                </div>
+              </div>
+              <div className="d-flex gap-2">
+                <Link to="/signup">
+                  <FontAwesomeIcon
+                    className="navbar-icon"
+                    icon={faUser}
+                    title="sign in"
+                  ></FontAwesomeIcon>
+                </Link>
+                <FontAwesomeIcon
+                  className="navbar-icon"
+                  icon={faFacebook}
+                ></FontAwesomeIcon>
+                <FontAwesomeIcon
+                  className="navbar-icon"
+                  icon={faUser}
+                ></FontAwesomeIcon>
+                <FontAwesomeIcon
+                  className="navbar-icon"
+                  icon={faFacebook}
+                ></FontAwesomeIcon>
+                <FontAwesomeIcon
+                  className="navbar-icon"
+                  icon={faUser}
+                ></FontAwesomeIcon>
+                <FontAwesomeIcon
+                  className="navbar-icon"
+                  icon={faFacebook}
+                ></FontAwesomeIcon>
+              </div>
               {/* <ul className="navbar-nav d-flex position-absolute top-50 translate-middle align-items-center">
                 <li className="nav-item me-3">
                   <a className="nav-link" href="#">
