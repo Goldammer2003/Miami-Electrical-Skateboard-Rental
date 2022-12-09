@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import "react-dates/initialize";
 import { SingleDatePicker } from "react-dates";
 import "react-dates/lib/css/_datepicker.css";
+import { DayPicker } from "react-dates";
+import { DayPickerRangeController } from "react-dates";
 export const Detailedcardsix = () => {
-  const [date, setDate] = useState(new Date().getDate());
+  const runTime = new Date().getDate();
+  const [date, setDate] = useState({ date: runTime });
 
   const [focused, setFocused] = useState(null);
 
@@ -183,13 +186,8 @@ export const Detailedcardsix = () => {
               </div>
             </div>
           </div>
-          {/* <SingleDatePicker
-            date={date} // momentPropTypes.momentObj or null
-            onDateChange={(date) => setDate(date)} // PropTypes.func.isRequired
-            focused={focused} // PropTypes.bool
-            onFocusChange={(newFocused) => setFocused(newFocused)} // PropTypes.func.isRequired
-            id="your_unique_id" // PropTypes.string.isRequired,
-          /> */}
+
+          <DayPickerRangeController />
         </div>
 
         <div className="bg-light mt-52 mt-lg-0">
