@@ -31,7 +31,6 @@ export const Cards = () => (
               className="ms-auto me-2 d-flex align-items-center justify-content-center border rounded-3 picturesize48"
               href="#"
             >
-              <button>Click Me</button>
               <svg
                 width="12"
                 height="12"
@@ -261,28 +260,17 @@ export const Cards = () => (
                 </span>
               </p>
             </a>
-            <a
-              className="ms-auto me-2 d-flex align-items-center justify-content-center border rounded-3 picturesize48"
-              href="#"
+            <Link
+              style={{ textDecoration: "none", paddingBottom: "20px" }}
+              to="/detailedcardsix"
             >
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+              <div
+                className="ms-auto me-2 d-flex align-items-center justify-content-center border rounded-3 "
+                style={{ marginBottom: "25px" }}
               >
-                <rect x="5" width="2" height="12" fill="#161616"></rect>
-                <rect
-                  x="12"
-                  y="5"
-                  width="2"
-                  height="12"
-                  transform="rotate(90 12 5)"
-                  fill="#161616"
-                ></rect>
-              </svg>
-            </a>
+                <h1 style={{ fontSize: "20px", color: "#FFA07A" }}>Rent Out</h1>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
