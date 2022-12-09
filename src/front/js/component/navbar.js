@@ -6,7 +6,13 @@ import {
   faPerson,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook, faInstagram, faTiktok, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebook,
+  faInstagram,
+  faTiktok,
+  faTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 import "../../styles/navbar.css";
 
 export const Navbar = () => {
@@ -86,28 +92,33 @@ export const Navbar = () => {
                   <FontAwesomeIcon
                     className="navbar-icon"
                     icon={faUser}
-                    title="sign in"
+                    title="Sign in"
                   ></FontAwesomeIcon>
                 </Link>
                 <FontAwesomeIcon
                   className="navbar-icon"
                   icon={faFacebook}
+                  title="Facebook"
                 ></FontAwesomeIcon>
                 <FontAwesomeIcon
                   className="navbar-icon"
                   icon={faTwitter}
+                  title="Twitter"
                 ></FontAwesomeIcon>
                 <FontAwesomeIcon
                   className="navbar-icon"
                   icon={faTiktok}
+                  title="Tiktok"
                 ></FontAwesomeIcon>
                 <FontAwesomeIcon
                   className="navbar-icon"
                   icon={faYoutube}
+                  title="YouTube"
                 ></FontAwesomeIcon>
                 <FontAwesomeIcon
                   className="navbar-icon"
                   icon={faInstagram}
+                  title="Instagram"
                 ></FontAwesomeIcon>
               </div>
               {/* <ul className="navbar-nav d-flex position-absolute top-50 translate-middle align-items-center">
