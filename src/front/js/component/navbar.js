@@ -47,12 +47,12 @@ export const Navbar = () => {
               <a className="navbar-brand" href="#">
                 <img
                   className="img-fluid"
-                  src="https://www.bing.com/images/search?view=detailV2&ccid=NvAEb1G3&id=B8A5C5C4FE165E9128672C1F2ABBFAF04A22A116&thid=OIP.NvAEb1G3_lKlV_ZcoP6ncwHaHq&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.36f0046f51b7fe52a557f65ca0fea773%3frik%3dFqEiSvD6uyofLA%26riu%3dhttp%253a%252f%252fwww.calstreets.com%252fsite%252fimages%252ftetzstickers%252fimages%252fskatopia.jpg%26ehk%3dsyphm6vUtzFzDXGZhZx74gaBVajzuncF%252bB%252f%252f2HnWZWA%253d%26risl%3d%"
+                  src="https://th.bing.com/th/id/R.36f0046f51b7fe52a557f65ca0fea773?rik=FqEiSvD6uyofLA&riu=http%3a%2f%2fwww.calstreets.com%2fsite%2fimages%2ftetzstickers%2fimages%2fskatopia.jpg&ehk=syphm6vUtzFzDXGZhZx74gaBVajzuncF%2bB%2f%2f2HnWZWA%3d&risl=&pid=ImgRaw&r=0"
                   alt=""
-                  width="auto"
+                  width="50px"
                 ></img>
               </a>
-              <ul className="navbar-nav d-flex position-absolute top-50 start-50 translate-middle align-items-center">
+              {/* <ul className="navbar-nav d-flex position-absolute top-50 translate-middle align-items-center">
                 <li className="nav-item me-3">
                   <a className="nav-link" href="#">
                     In progress (1)
@@ -73,9 +73,10 @@ export const Navbar = () => {
                     In progress (4)
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
-            <div className="d-flex align-items-center justify-content-end me-xxl-12">
+
+            {/* <div className="d-flex align-items-center justify-content-end me-xxl-12">
               <a
                 className="link-light text-decoration-none me-10 text-dark"
                 href="#"
@@ -130,8 +131,8 @@ export const Navbar = () => {
                   3
                 </span>
               </a>
-            </div>
-            <a
+            </div> */}
+            {/* <a
               className="link-dark py-10 px-10 border-start text-decoration-none d-flex align-items-center fw-bold"
               href="#"
             >
@@ -161,9 +162,9 @@ export const Navbar = () => {
               <Link to="/signup">
                 <span>Sign&nbsp;In</span>
               </Link>
-            </a>
+            </a> */}
           </div>
-          <div className="d-xl-none d-flex align-items-center justify-content-end">
+          {/* <div className="d-xl-none d-flex align-items-center justify-content-end">
             <a
               className="link-light text-decoration-none me-10 text-dark"
               href="#"
@@ -218,7 +219,7 @@ export const Navbar = () => {
                 3
               </span>
             </a>
-          </div>
+          </div> */}
         </div>
       </nav>
       <div
