@@ -206,7 +206,7 @@ export const Detailedcardsix = () => {
               </h4>
               <p className="mw-2xl text-secondary">
                 Miami offers countless spots to ride your electrical skateboard
-                alongside the{" "}
+                alongside it's manyy paved beach paths{" "}
               </p>
             </div>
           </div>
