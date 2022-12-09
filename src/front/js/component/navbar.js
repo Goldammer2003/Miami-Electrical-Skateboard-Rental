@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faBaby,
+  faCartShopping,
   faMagnifyingGlass,
   faPerson,
   faUser,
@@ -91,9 +93,17 @@ export const Navbar = () => {
                 <Link to="/signup">
                   <FontAwesomeIcon
                     className="navbar-icon"
-                    icon={faUser}
-                    title="Sign in"
+                    icon={faCartShopping}
+                    title="Shopping cart"
                   ></FontAwesomeIcon>
+                </Link>
+                &nbsp;&nbsp;&nbsp;
+                <Link to="/signup">
+                <FontAwesomeIcon
+                  className="navbar-icon"
+                  icon={faUser}
+                  title="Sign in"
+                ></FontAwesomeIcon>
                 </Link>
                 <FontAwesomeIcon
                   className="navbar-icon"
