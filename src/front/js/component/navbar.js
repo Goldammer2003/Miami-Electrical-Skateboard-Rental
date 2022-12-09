@@ -65,12 +65,15 @@ export const Navbar = () => {
                   className="navbar-brand d-flex align-items-center gap-3 py-0"
                   href="#"
                 >
-                  <img
-                    className="img-fluid"
-                    src="https://th.bing.com/th/id/R.36f0046f51b7fe52a557f65ca0fea773?rik=FqEiSvD6uyofLA&riu=http%3a%2f%2fwww.calstreets.com%2fsite%2fimages%2ftetzstickers%2fimages%2fskatopia.jpg&ehk=syphm6vUtzFzDXGZhZx74gaBVajzuncF%2bB%2f%2f2HnWZWA%3d&risl=&pid=ImgRaw&r=0"
-                    alt=""
-                    width="50px"
-                  ></img>
+                  <Link to="/signup">
+                    <img
+                      className="img-fluid"
+                      src="https://th.bing.com/th/id/R.36f0046f51b7fe52a557f65ca0fea773?rik=FqEiSvD6uyofLA&riu=http%3a%2f%2fwww.calstreets.com%2fsite%2fimages%2ftetzstickers%2fimages%2fskatopia.jpg&ehk=syphm6vUtzFzDXGZhZx74gaBVajzuncF%2bB%2f%2f2HnWZWA%3d&risl=&pid=ImgRaw&r=0"
+                      alt=""
+                      width="50px"
+                      title="Home page"
+                    ></img>
+                  </Link>
                   <h4 className="mb-0">Electical Skateboards</h4>
                 </a>
                 <div
@@ -99,11 +102,11 @@ export const Navbar = () => {
                 </Link>
                 &nbsp;&nbsp;&nbsp;
                 <Link to="/signup">
-                <FontAwesomeIcon
-                  className="navbar-icon"
-                  icon={faUser}
-                  title="Sign in"
-                ></FontAwesomeIcon>
+                  <FontAwesomeIcon
+                    className="navbar-icon"
+                    icon={faUser}
+                    title="Sign in"
+                  ></FontAwesomeIcon>
                 </Link>
                 <FontAwesomeIcon
                   className="navbar-icon"
