@@ -42,6 +42,11 @@ export const Footer = () => (
                 Contact
               </a>
             </li>
+            <li className="col-12 col-sm-6 col-md-4 col-lg-auto mb-4">
+              <a className="btn bg-white py-2 rounded-pill" href="#">
+                About us
+              </a>
+            </li>
           </ul>
           <div className="row mt-20 text-start">
             <div className="col-12 col-lg-auto mb-10 mb-lg-0">
