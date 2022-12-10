@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "react-dates/initialize";
 import { SingleDatePicker } from "react-dates";
@@ -6,12 +6,19 @@ import "react-dates/lib/css/_datepicker.css";
 import { DayPicker } from "react-dates";
 import { DayPickerRangeController } from "react-dates";
 import { toMomentObject } from "react-dates";
+import { Context } from "../store/appContext";
+import { useNavigate } from "react-router-dom";
 export const Detailedcardsix = () => {
   const runTime = toMomentObject(new Date());
   const [date, setDate] = useState(runTime);
-
+  const Navigate = useNavigate();
   const [focused, setFocused] = useState(true);
-
+  const { store, actions } = useContext(Context);
+  useEffect(() => {
+    if (!store.isLogin) {
+      Navigate("/");
+    }
+  });
   return (
     <>
       <section className="pt-20 overflow-hidden">
@@ -195,6 +202,9 @@ export const Detailedcardsix = () => {
             onFocusChange={(focused) => setFocused(focused)} // PropTypes.func.isRequired
             id="your_unique_id" // PropTypes.string.isRequired,
           />
+          <div className="d-flex align-items-end">
+            <button>Choose this booking date</button>
+          </div>
         </div>
 
         <div className="bg-light mt-52 mt-lg-0">
