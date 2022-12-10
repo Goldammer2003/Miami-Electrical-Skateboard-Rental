@@ -65,7 +65,7 @@ export const Navbar = () => {
                   className="navbar-brand d-flex align-items-center gap-3 py-0"
                   href="#"
                 >
-                  <Link to="/signup">
+                  <Link to="/">
                     <img
                       className="img-fluid"
                       src="https://th.bing.com/th/id/R.36f0046f51b7fe52a557f65ca0fea773?rik=FqEiSvD6uyofLA&riu=http%3a%2f%2fwww.calstreets.com%2fsite%2fimages%2ftetzstickers%2fimages%2fskatopia.jpg&ehk=syphm6vUtzFzDXGZhZx74gaBVajzuncF%2bB%2f%2f2HnWZWA%3d&risl=&pid=ImgRaw&r=0"
@@ -101,7 +101,7 @@ export const Navbar = () => {
                   ></FontAwesomeIcon>
                 </Link>
                 &nbsp;&nbsp;&nbsp;
-                <Link to="/signup">
+                <Link to="/signin">
                   <FontAwesomeIcon
                     className="navbar-icon"
                     icon={faUser}

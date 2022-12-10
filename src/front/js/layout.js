@@ -12,6 +12,7 @@ import { Footer } from "./component/footer";
 import { Cards } from "./component/cards";
 import { Customerexperience } from "./component/customerexperience";
 import { Signup } from "./pages/signup";
+import { Signin } from "./pages/signin";
 import { Jumbotron } from "./component/jumbotron";
 import { Detailedcardsix } from "./pages/detailedcardsix";
 //create your first component
@@ -30,6 +31,7 @@ const Layout = () => {
             <Route path="/" element={<Home />} />
             <Route path="/detailedcardsix" element={<Detailedcardsix />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/signin" element={<Signin />} />
           </Routes>
           <Footer />
         </ScrollToTop>

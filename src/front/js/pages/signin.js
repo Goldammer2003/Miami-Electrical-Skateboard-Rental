@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const Signup = () => {
+export const Signin = () => {
   return (
     <>
       <div className="position-relative overflow-hidden">
@@ -10,7 +10,9 @@ export const Signup = () => {
             <div className="col-12 col-lg-4 mb-12 mb-lg-0">
               <div className="py-20 text-center">
                 <a className="d-inline-block h6 mb-14" href="#"></a>
-                <h2 className="mb-8">Register to enjoy our greatest deals!</h2>
+                <h2 className="mb-8">
+                  Sign In to see your Bookings at our Website from everywhere!
+                </h2>
                 <p className="mb-10">Please, do not hesitate</p>
                 <form action="">
                   <input
@@ -25,10 +27,11 @@ export const Signup = () => {
                   ></input>
 
                   <div className="form-check" for="">
-                    <input className="form-check-input" type="checkbox"></input>
                     <label className="form-check-label small">
-                      By singning up, you agree to our Terms, Data Policy and
-                      Cookies.
+                      Don't have an account?{" "}
+                      <Link to="/signup" className="text-primary">
+                        Register and get started!
+                      </Link>
                     </label>
                   </div>
                   <button className="mt-12 mt-md-16 btn btn-dark">
