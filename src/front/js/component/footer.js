@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => (
   <footer className="footer mt-auto py-3 text-center">
@@ -43,8 +44,10 @@ export const Footer = () => (
               </a>
             </li>
             <li className="col-12 col-sm-6 col-md-4 col-lg-auto mb-4">
-              <a className="btn bg-white py-2 rounded-pill" href="#">
-                About us
+              <a className="btn bg-white py-2 rounded-pill">
+                <Link to="/Aboutus">
+                  <p className="btn bg-white py-2 rounded-pill"> About us </p>
+                </Link>
               </a>
             </li>
           </ul>
