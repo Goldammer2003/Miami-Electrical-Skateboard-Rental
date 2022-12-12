@@ -24,8 +24,8 @@ export const Detailedcardsix = () => {
   return (
     <>
       <section className="pt-20 overflow-hidden">
-        <div className="d-flex">
-          <div className="container">
+        <div className="d-flex py-5">
+          <div className="container ">
             <nav aria-label="breadcrumb mb-8">
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">
@@ -196,16 +196,17 @@ export const Detailedcardsix = () => {
               </div>
             </div>
           </div>
+          <div className="d-flex flex-column justify-content-between me-auto align-items-center ">
+            <SingleDatePicker
+              date={date} // momentPropTypes.momentObj or null
+              onDateChange={(date) => setDate(date)} // PropTypes.func.isRequired
+              focused={focused} // PropTypes.bool
+              onFocusChange={(focused) => setFocused(focused)} // PropTypes.func.isRequired
+              id="your_unique_id" // PropTypes.string.isRequired,
+            />
 
-          <SingleDatePicker
-            date={date} // momentPropTypes.momentObj or null
-            onDateChange={(date) => setDate(date)} // PropTypes.func.isRequired
-            focused={focused} // PropTypes.bool
-            onFocusChange={(focused) => setFocused(focused)} // PropTypes.func.isRequired
-            id="your_unique_id" // PropTypes.string.isRequired,
-          />
-          <div className="d-flex align-items-end">
             <button
+              className="btn btn-primary "
               onClick={() => {
                 if (store.isLogin) {
                   actions.updateCart({
