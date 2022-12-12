@@ -14,11 +14,12 @@ export const Detailedcardsix = () => {
   const Navigate = useNavigate();
   const [focused, setFocused] = useState(true);
   const { store, actions } = useContext(Context);
-  useEffect(() => {
-    if (!store.isLogin) {
-      Navigate("/");
-    }
-  });
+  //useEffect(() => {
+  //if (!store.isLogin) {
+  //Navigate("/");
+  //}
+  //});
+
   console.log(date._d.toLocaleDateString());
   return (
     <>
@@ -206,11 +207,16 @@ export const Detailedcardsix = () => {
           <div className="d-flex align-items-end">
             <button
               onClick={() => {
-                actions.updateCart({
-                  name: store.user.name,
-                  skateboard_type: "E-Skateboard- Onewheel Edition",
-                  date: date._d.toLocaleDateString(),
-                });
+                if (store.isLogin) {
+                  actions.updateCart({
+                    name: store.user.name,
+                    skateboard_type: "E-Skateboard- Onewheel Edition",
+                    date: date._d.toLocaleDateString(),
+                  });
+                  Navigate("/cart");
+                } else {
+                  Navigate("/signup");
+                }
               }}
             >
               Choose this booking date

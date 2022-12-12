@@ -17,6 +17,7 @@ import { Jumbotron } from "./component/jumbotron";
 import { Detailedcardsix } from "./pages/detailedcardsix";
 import Aboutus from "./pages/aboutus";
 import { Detailedcardone } from "./pages/detailedcardone";
+import Checkout from "./pages/checkout";
 //create your first component
 const Layout = () => {
   //the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -33,6 +34,7 @@ const Layout = () => {
             <Route path="/" element={<Home />} />
             <Route path="/detailedcardone" element={<Detailedcardone />} />
             <Route path="/detailedcardsix" element={<Detailedcardsix />} />
+            <Route path="/cart" element={<Checkout />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/aboutus" element={<Aboutus />} />
