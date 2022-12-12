@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,8 +15,11 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import "../../styles/navbar.css";
+import { Context } from "../store/appContext";
+import React, { useState, useContext, useEffect } from "react";
 
 export const Navbar = () => {
+  const { store, actions } = useContext(Context);
   return (
     <section className="position-relative">
       <div className="py-2 bg-info">
@@ -93,7 +95,7 @@ export const Navbar = () => {
                 </div>
               </div>
               <div className="d-flex gap-2">
-                <Link to="/signup">
+                <Link to={store.isLogin ? "/cart" : "/signin"}>
                   <FontAwesomeIcon
                     className="navbar-icon"
                     icon={faCartShopping}
