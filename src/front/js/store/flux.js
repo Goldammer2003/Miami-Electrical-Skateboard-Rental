@@ -3,6 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
     store: {
       isLogin: true,
       message: null,
+      cartList: [],
       demo: [
         {
           title: "FIRST",
@@ -15,11 +16,23 @@ const getState = ({ getStore, getActions, setStore }) => {
           initial: "white",
         },
       ],
+      user: {
+        name: "Manuel",
+      },
     },
     actions: {
       // Use getActions to call a function within a fuction
       exampleFunction: () => {
         getActions().changeColor(0, "green");
+      },
+
+      updateCart: (data) => {
+        let savingDate = getStore().cartList;
+
+        let newCart = [...savingDate, data];
+        console.log(newCart);
+        setStore({ cartList: newCart });
+        //console.log(cartList);
       },
 
       getMessage: async () => {

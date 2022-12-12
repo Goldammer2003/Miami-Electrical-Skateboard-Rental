@@ -19,6 +19,7 @@ export const Detailedcardsix = () => {
       Navigate("/");
     }
   });
+  console.log(date._d.toLocaleDateString());
   return (
     <>
       <section className="pt-20 overflow-hidden">
@@ -203,7 +204,17 @@ export const Detailedcardsix = () => {
             id="your_unique_id" // PropTypes.string.isRequired,
           />
           <div className="d-flex align-items-end">
-            <button>Choose this booking date</button>
+            <button
+              onClick={() => {
+                actions.updateCart({
+                  name: store.user.name,
+                  skateboard_type: "E-Skateboard- Onewheel Edition",
+                  date: date._d.toLocaleDateString(),
+                });
+              }}
+            >
+              Choose this booking date
+            </button>
           </div>
         </div>
 
