@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
-      isLogin: false,
+      isLogin: true,
       message: null,
       cartList: [],
       demo: [
