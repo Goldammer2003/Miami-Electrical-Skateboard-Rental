@@ -42,7 +42,6 @@ const Layout = () => {
           <Footer />
         </ScrollToTop>
       </BrowserRouter>
-      {<p>Hello</p>}
     </div>
   );
 };

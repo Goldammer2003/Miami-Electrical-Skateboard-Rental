@@ -211,7 +211,10 @@ export const Detailedcardsix = () => {
                 if (store.isLogin) {
                   actions.updateCart({
                     name: store.user.name,
+                    email: store.user.email,
                     skateboard_type: "E-Skateboard- Onewheel Edition",
+                    image:
+                      "https://images.unsplash.com/photo-1579613288371-cb0e63d5aa37?crop=entropy&amp;cs=tinysrgb&amp;fm=jpg&amp;ixid=MnwzMzIzMzB8MHwxfHNlYXJjaHwyfHxFbGVjdHJpY2FsJTIwU2thdGVib2FyZHN8ZW58MHwwfHx8MTY2OTY4NjEyMQ&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1920",
                     date: date._d.toLocaleDateString(),
                   });
                   Navigate("/cart");

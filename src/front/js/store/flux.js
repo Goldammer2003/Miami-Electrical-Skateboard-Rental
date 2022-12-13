@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
-      isLogin: false,
+      isLogin: true,
       message: null,
       cartList: [],
       demo: [
@@ -18,6 +18,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       ],
       user: {
         name: "Manuel",
+        email: "mangobo@freenet.de",
       },
     },
     actions: {
