@@ -8,11 +8,15 @@ from flask_jwt_extended import create_access_token
 from flask_jwt_extended import get_jwt_identity
 from flask_jwt_extended import jwt_required
 from flask_jwt_extended import JWTManager
+import os
+from flask_migrate import Migrate
+from flask_cors import CORS
+from api.admin import setup_admin
 api = Blueprint('api', __name__)
 
 app = Flask(__name__)
 app.url_map.strict_slashes = False
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DB_CONNECTION_STRING')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 MIGRATE = Migrate(app, db)
 db.init_app(app)
@@ -21,7 +25,7 @@ setup_admin(app)
 
 app.config["JWT_SECRET_KEY"] = "AlphaExilon#Ch.uta@KL2"  # Change this!
 jwt = JWTManager(app)
-api = Blueprint('api', __name__)
+
 @api.route('/hello', methods=['POST', 'GET'])
 def handle_hello():
 
