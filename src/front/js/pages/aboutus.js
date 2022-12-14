@@ -68,7 +68,7 @@ const Aboutus = () => {
               <p className="card-title text-center">Co-CEO/Co-Founder</p>
               <h6 className="card-subtitle mb-2 text-muted text-center">
                 Full-Stack Software Developer {"  "}
-                <a href="https://www.linkedin.com/in/enmanuel-pinto-b8405613b/">
+                <a href="https://www.linkedin.com/in/enmanuel-pinto-b8405613b/" target="_blank">
                   <FontAwesomeIcon
                     className="text-primary"
                     icon={faLinkedinIn}
