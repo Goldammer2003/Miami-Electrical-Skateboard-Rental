@@ -1,11 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "react-dates/initialize";
 import { SingleDatePicker } from "react-dates";
 import "react-dates/lib/css/_datepicker.css";
 import { DayPicker } from "react-dates";
 import { DayPickerRangeController } from "react-dates";
+import { toMomentObject } from "react-dates";
+import { Context } from "../store/appContext";
+import { useNavigate } from "react-router-dom";
 export const Detailedcardone = () => {
+  const runTime = toMomentObject(new Date());
+  const [date, setDate] = useState(runTime);
+  const Navigate = useNavigate();
+  const [focused, setFocused] = useState(true);
+  const { store, actions } = useContext(Context);
+  //useEffect(() => {
+  //if (!store.isLogin) {
+  //Navigate("/");
+  //}
+  //});
+  console.log(date._d.toLocaleDateString());
+
   return (
     <>
       <section className="pt-20 overflow-hidden">
@@ -181,6 +196,37 @@ export const Detailedcardone = () => {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="d-flex flex-column justify-content-between me-auto align-items-center ">
+            <SingleDatePicker
+              date={date} // momentPropTypes.momentObj or null
+              onDateChange={(date) => setDate(date)} // PropTypes.func.isRequired
+              focused={focused} // PropTypes.bool
+              onFocusChange={(focused) => setFocused(focused)} // PropTypes.func.isRequired
+              id="your_unique_id" // PropTypes.string.isRequired,
+            />
+
+            <button
+              className="btn btn-primary "
+              onClick={() => {
+                if (store.isLogin) {
+                  actions.updateCart({
+                    name: store.user.name,
+                    email: store.user.email,
+                    skateboard_type: "E-Skateboard-Single Edition",
+                    image:
+                      "https://static.shuffle.dev/uploads/files/f3/f3a7e512c9216c316e6bdb267d859cb3b15861dd/6ef3be18f65bd9a6ffc1023e930d232d.jpg",
+                    date: date._d.toLocaleDateString(),
+                  });
+                  Navigate("/cart");
+                } else {
+                  Navigate("/signup");
+                }
+              }}
+            >
+              Choose this booking date
+            </button>
           </div>
         </div>
 
