@@ -15,7 +15,7 @@ export const Signup = () => {
                 <form action="">
                   <input
                     className="form-control form-control-lg mb-4"
-                    type="text"
+                    type="email"
                     placeholder="john@example.com"
                   ></input>
                   <input
@@ -23,6 +23,42 @@ export const Signup = () => {
                     type="password"
                     placeholder="Password"
                   ></input>
+                  <input
+                    className="form-control form-control-lg mb-4"
+                    type="text"
+                    placeholder="Firstname"
+                  />
+                  <input
+                    className="form-control form-control-lg mb-4"
+                    type="text"
+                    placeholder="Lastname"
+                  />
+                  <input
+                    className="form-control form-control-lg mb-4"
+                    type="text"
+                    placeholder="adress"
+                  />
+
+                  <input
+                    className="form-control form-control-lg mb-4"
+                    type="text"
+                    placeholder="city"
+                  />
+                  <input
+                    className="form-control form-control-lg mb-4"
+                    type="text"
+                    placeholder="state"
+                  />
+                  <input
+                    className="form-control form-control-lg mb-4"
+                    type="text"
+                    placeholder="zipcode"
+                  />
+                  <input
+                    className="form-control form-control-lg mb-4"
+                    type="text"
+                    placeholder="country"
+                  />
 
                   <div className="form-check" for="">
                     <input className="form-check-input" type="checkbox"></input>
