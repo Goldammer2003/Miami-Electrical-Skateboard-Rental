@@ -49,9 +49,7 @@ export const Detailedcardthree = () => {
             <div className="row align-items-center mb-24 mb-lg-52">
               <div className="col-12 col-lg-4 mb-10 mb-lg-0">
                 <span className="text-secondary">Brille</span>
-                <h1 className="mt-2 mb-6 mw-xl">
-                  E-Skateboard-Partner Edition{" "}
-                </h1>
+                <h1 className="mt-2 mb-6 mw-xl">E-Skateboard-Mini Edition </h1>
                 <div className="mb-8">
                   <button className="btn p-0">
                     <img
@@ -128,7 +126,7 @@ export const Detailedcardthree = () => {
                   <img
                     className="img-fluid w-100 h-100"
                     style={{ objectFit: "cover" }}
-                    src="https://static.shuffle.dev/uploads/files/f3/f3a7e512c9216c316e6bdb267d859cb3b15861dd/H-Collection-Product-Bamboo-AT.jpg"
+                    src="https://static.shuffle.dev/uploads/files/f3/f3a7e512c9216c316e6bdb267d859cb3b15861dd/Boosted-Mini-Electric-Skateboard-2.jpg"
                     alt=""
                   ></img>
                   <a
