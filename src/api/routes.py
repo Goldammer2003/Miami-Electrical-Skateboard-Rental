@@ -16,3 +16,15 @@ def handle_hello():
     }
 
     return jsonify(response_body), 200
+
+@api.route("/user", methods=['POST', 'GET'])
+def handle_user():
+
+    if request.method == "GET":
+        all_users = User.query.all()
+        serialized = list(map(lambda x: x.serialize(), all_users))
+        return jsonify(serialized), 200
+    elif request.method == "POST":
+        return "POST"
+    else :
+        return "Method Not Found"
