@@ -18,6 +18,7 @@ import { Detailedcardsix } from "./pages/detailedcardsix";
 import Aboutus from "./pages/aboutus";
 import { Detailedcardone } from "./pages/detailedcardone";
 import Checkout from "./pages/checkout";
+import { Detailedcartwo } from "./pages/detailedcardtwo";
 //create your first component
 const Layout = () => {
   //the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -33,6 +34,7 @@ const Layout = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/detailedcardone" element={<Detailedcardone />} />
+            <Route path="/detailedcardtwo" element={<Detailedcartwo />} />
             <Route path="/detailedcardsix" element={<Detailedcardsix />} />
             <Route path="/cart" element={<Checkout />} />
             <Route path="/signup" element={<Signup />} />

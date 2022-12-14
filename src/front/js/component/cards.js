@@ -55,35 +55,24 @@ export const Cards = () => (
                 src="https://static.shuffle.dev/uploads/files/f3/f3a7e512c9216c316e6bdb267d859cb3b15861dd/H-Collection-Product-Bamboo-AT.jpg"
                 alt=""
               />
+
               <h5 className="mb-2">E-Skateboard - Partner Edition</h5>
               <p className="h6 text-info">
                 <span>39.99 Dollars/Day</span>
                 <span className="">49.99 Dollars/Day</span>
               </p>
             </a>
-            <a
-              className="ms-auto me-2 d-flex align-items-center justify-content-center border rounded-3 picturesize48"
-              href="#"
-              id="48"
+            <Link
+              style={{ textDecoration: "none", paddingBottom: "20px" }}
+              to="/detailedcardtwo"
             >
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+              <div
+                className="ms-auto me-2 d-flex align-items-center justify-content-center border rounded-3 "
+                style={{ marginBottom: "25px" }}
               >
-                <rect x="5" width="2" height="12" fill="#161616"></rect>
-                <rect
-                  x="12"
-                  y="5"
-                  width="2"
-                  height="12"
-                  transform="rotate(90 12 5)"
-                  fill="#161616"
-                ></rect>
-              </svg>
-            </a>
+                <h1 style={{ fontSize: "20px", color: "#FFA07A" }}>Rent Out</h1>
+              </div>
+            </Link>
           </div>
         </div>
         <div className="col-12 col-md-6 col-lg-4 mb-6">
