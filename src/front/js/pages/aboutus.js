@@ -37,7 +37,7 @@ const Aboutus = () => {
         <div className="col">
           <div className="card h-100">
             <img
-              src="https://ca.slack-edge.com/T0BFXMWMV-U03Q9TYN3CY-1bbf5583d47b-512"
+              src="https://ca.slack-edge.com/T0BFXMWMV-U03Q9TYN3CY-11ad7b09b644-512"
               className="card-img-top"
               alt="..."
             />
