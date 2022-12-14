@@ -2,6 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const Signup = () => {
+  function handle_signup() {
+    fetch(
+      "https://3001-goldammer20-miamielectr-2gxkmhastf2.ws-eu78.gitpod.io/api/signup",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+  }
   return (
     <>
       <div className="position-relative overflow-hidden">
