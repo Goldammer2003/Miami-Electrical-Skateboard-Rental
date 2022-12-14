@@ -15,6 +15,7 @@ const Aboutus = () => {
             />
             <div className="card-body">
               <h5 className="card-title text-center">Manuel Goldammer</h5>
+              <p className="card-title text-center">Co-CEO/Co-Founder</p>
               <h6 className="card-subtitle mb-2 text-muted text-center">
                 Software Developer {"  "}
                 <FontAwesomeIcon
@@ -41,6 +42,7 @@ const Aboutus = () => {
             />
             <div className="card-body">
               <h5 className="card-title text-center">Jesse Metayer</h5>
+              <p className="card-title text-center">Co-CEO/Co-Founder</p>
               <h6 className="card-subtitle mb-2 text-muted text-center">
                 Software Developer {"  "}
                 <FontAwesomeIcon
@@ -67,6 +69,7 @@ const Aboutus = () => {
             />
             <div className="card-body">
               <h5 className="card-title text-center">Enmanuel Pinto</h5>
+              <p className="card-title text-center">Co-CEO/Co-Founder</p>
               <h6 className="card-subtitle mb-2 text-muted text-center">
                 Software Developer {"  "}
                 <a href="https://www.linkedin.com/in/enmanuel-pinto-b8405613b/">
