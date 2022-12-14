@@ -8,7 +8,7 @@ import { DayPickerRangeController } from "react-dates";
 import { toMomentObject } from "react-dates";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
-export const Detailedcardtwo = () => {
+export const Detailedcardthree = () => {
   const runTime = toMomentObject(new Date());
   const [date, setDate] = useState(runTime);
   const Navigate = useNavigate();
@@ -41,7 +41,7 @@ export const Detailedcardtwo = () => {
                     className="text-decoration-none fw-bold text-uppercase text-secondary"
                     href="#"
                   >
-                    E-Skateboard-Single Edition
+                    E-Skateboard-Mini Edition
                   </a>
                 </li>
               </ol>
@@ -99,10 +99,11 @@ export const Detailedcardtwo = () => {
                   </span>
                 </p>
                 <p className="mw-md text-secondary">
-                  Rent out the Electrical Skateboard Partner Edition to spend
-                  time learning E-skating with another person together. In just
-                  a few minutes both of you will be able to ride your
-                  E-skataebord alongside the beautiful beachstreets of Miami{" "}
+                  Rent out the Electrical Skateboard Mini Edition to learn
+                  E-skating with the most agile E-skateboard that can exist. The
+                  Mini E-skateboard Edition es expecially great for navigating
+                  in tight spraces, getting to know the variety of E-Skateboard
+                  varients{" "}
                 </p>
               </div>
               <div className="col-12 col-lg-4 mb-40 mb-lg-0">
@@ -214,9 +215,9 @@ export const Detailedcardtwo = () => {
                   actions.updateCart({
                     name: store.user.name,
                     email: store.user.email,
-                    skateboard_type: "E-Skateboard Partner Edition",
+                    skateboard_type: "E-Skateboard-Mini Edition",
                     image:
-                      "https://static.shuffle.dev/uploads/files/f3/f3a7e512c9216c316e6bdb267d859cb3b15861dd/H-Collection-Product-Bamboo-AT.jpg",
+                      "https://static.shuffle.dev/uploads/files/f3/f3a7e512c9216c316e6bdb267d859cb3b15861dd/Boosted-Mini-Electric-Skateboard-2.jpg",
                     date: date._d.toLocaleDateString(),
                   });
                   Navigate("/cart");
