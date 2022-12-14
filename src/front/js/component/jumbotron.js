@@ -9,7 +9,7 @@ export const Jumbotron = () => (
             className=" text-white pb-5 ps-5 "
             style={{ marginBottom: "150px", fontSize: "40px", width: "400px" }}
           >
-            Rent out Electrical Skatebards in Miami!
+            Rent out Electrical Skateboards in Miami!
           </h2>
         </div>
       </div>

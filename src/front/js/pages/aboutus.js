@@ -17,16 +17,14 @@ const Aboutus = () => {
               <h5 className="card-title text-center">Manuel Goldammer</h5>
               <p className="card-title text-center">Co-CEO/Co-Founder</p>
               <h6 className="card-subtitle mb-2 text-muted text-center">
-                Software Developer {"  "}
+                Full-Stack Software Developer {"  "}
                 <FontAwesomeIcon
                   className="text-primary"
                   icon={faLinkedinIn}
                   title="Linkenin"
                 ></FontAwesomeIcon>
               </h6>
-              <p className="card-text">
-                
-              </p>
+              <p className="card-text"></p>
             </div>
             <div className="card-footer">
               <small className="text-muted"></small>
@@ -44,16 +42,14 @@ const Aboutus = () => {
               <h5 className="card-title text-center">Jesse Metayer</h5>
               <p className="card-title text-center">Co-CEO/Co-Founder</p>
               <h6 className="card-subtitle mb-2 text-muted text-center">
-                Software Developer {"  "}
+                Full-Stack Software Developer {"  "}
                 <FontAwesomeIcon
                   className="text-primary"
                   icon={faLinkedinIn}
                   title="Linkenin"
                 ></FontAwesomeIcon>
               </h6>
-              <p className="card-text">
-                
-              </p>
+              <p className="card-text"></p>
             </div>
             <div className="card-footer">
               <small className="text-muted"></small>
@@ -71,7 +67,7 @@ const Aboutus = () => {
               <h5 className="card-title text-center">Enmanuel Pinto</h5>
               <p className="card-title text-center">Co-CEO/Co-Founder</p>
               <h6 className="card-subtitle mb-2 text-muted text-center">
-                Software Developer {"  "}
+                Full-Stack Software Developer {"  "}
                 <a href="https://www.linkedin.com/in/enmanuel-pinto-b8405613b/">
                   <FontAwesomeIcon
                     className="text-primary"
@@ -80,9 +76,7 @@ const Aboutus = () => {
                   ></FontAwesomeIcon>
                 </a>
               </h6>
-              <p className="card-text">
-                
-              </p>
+              <p className="card-text"></p>
             </div>
             <div className="card-footer">
               <small className="text-muted"></small>
