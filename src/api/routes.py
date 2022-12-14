@@ -1,30 +1,27 @@
 """
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
+import os
 from flask import Flask, request, jsonify, url_for, Blueprint
+from flask_migrate import Migrate
+from flask_swagger import swagger
+from flask_cors import CORS
+from api.admin import setup_admin
 from api.models import db, User
 from api.utils import generate_sitemap, APIException
+
+
+# JWT
 from flask_jwt_extended import create_access_token
 from flask_jwt_extended import get_jwt_identity
 from flask_jwt_extended import jwt_required
 from flask_jwt_extended import JWTManager
-import os
-from flask_migrate import Migrate
-from flask_cors import CORS
-from api.admin import setup_admin
+
+import hashlib
+
 api = Blueprint('api', __name__)
 
-app = Flask(__name__)
-app.url_map.strict_slashes = False
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-MIGRATE = Migrate(app, db)
-db.init_app(app)
-CORS(app)
-setup_admin(app)
 
-app.config["JWT_SECRET_KEY"] = "AlphaExilon#Ch.uta@KL2"  # Change this!
-jwt = JWTManager(app)
 
 @api.route('/hello', methods=['POST', 'GET'])
 def handle_hello():
@@ -82,3 +79,7 @@ def handle_singin():
     else: 
         access_token=create_access_token(identity = user.id)
         return jsonify ({"token":access_token,"userid":user.id})
+
+
+if __name__ == "__main__":
+    app.run()
