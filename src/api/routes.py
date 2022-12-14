@@ -10,7 +10,18 @@ from flask_jwt_extended import jwt_required
 from flask_jwt_extended import JWTManager
 api = Blueprint('api', __name__)
 
+app = Flask(__name__)
+app.url_map.strict_slashes = False
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DB_CONNECTION_STRING')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+MIGRATE = Migrate(app, db)
+db.init_app(app)
+CORS(app)
+setup_admin(app)
 
+app.config["JWT_SECRET_KEY"] = "AlphaExilon#Ch.uta@KL2"  # Change this!
+jwt = JWTManager(app)
+api = Blueprint('api', __name__)
 @api.route('/hello', methods=['POST', 'GET'])
 def handle_hello():
 
@@ -53,3 +64,17 @@ def handle_signup():
         return jsonify("You are now registered"),200 
 
     else: return jsonify ("Your account does already exist"),409
+
+
+@api.route ("/signin", methods= ["POST"])
+def handle_singin():
+    information_inputFields = request.get_json(force=True)
+    information_email = information_inputFields["email"]
+    information_password= information_inputFields ["password"]
+    user=User.query.filter_by(email=information_email, password=information_password).first()
+    if user is None:
+        return jsonify ("E-mail does not exist, please register first")
+
+    else: 
+        access_token=create_access_token(identity = user.id)
+        return jsonify ({"token":access_token,"userid":user.id})
