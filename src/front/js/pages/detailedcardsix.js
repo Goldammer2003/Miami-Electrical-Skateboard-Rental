@@ -8,18 +8,19 @@ import { DayPickerRangeController } from "react-dates";
 import { toMomentObject } from "react-dates";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
+function useForceUpdate() {
+  const [value, setValue] = useState(0); // integer state
+  return () => setValue((value) => value + 1); // update the state to force render
+}
 export const Detailedcardsix = () => {
   const runTime = toMomentObject(new Date());
   const [date, setDate] = useState(runTime);
   const Navigate = useNavigate();
+  const forcedUpdate = useForceUpdate();
   const [focused, setFocused] = useState(true);
   const { store, actions } = useContext(Context);
-  //useEffect(() => {
-  //if (!store.isLogin) {
-  //Navigate("/");
-  //}
-  //});
-
+  useEffect(() => {}, [store.isLogin]);
+  console.log();
   console.log(date._d.toLocaleDateString());
   return (
     <>
@@ -208,6 +209,8 @@ export const Detailedcardsix = () => {
             <button
               className="btn btn-primary "
               onClick={() => {
+                console.log("login status", store.isLogin);
+                forcedUpdate();
                 if (store.isLogin) {
                   actions.updateCart({
                     name: store.user.name,

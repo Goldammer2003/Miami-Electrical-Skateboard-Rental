@@ -21,13 +21,14 @@ export const Signin = () => {
       .then((result) => {
         console.log(result);
         localStorage.setItem("token", result.token);
-        //Navigate("/signin");
+        actions.loginFunction(); // logins right when signin button is clicked
+        Navigate("/");
       })
       .catch((error) => console.log(error));
   }
   useEffect(() => {
     store.isLogin && Navigate("/");
-  }, []);
+  }, [store.isLogin]);
   return (
     <>
       <div className="position-relative overflow-hidden">

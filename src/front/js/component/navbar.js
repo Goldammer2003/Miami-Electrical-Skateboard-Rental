@@ -6,6 +6,7 @@ import {
   faMagnifyingGlass,
   faPerson,
   faUser,
+  faRightFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -50,9 +51,7 @@ export const Navbar = () => {
               fill="white"
             ></rect>
           </svg>
-          <p className="mb-0 small fw-bold text-light">
-            Advertise here!
-          </p>
+          <p className="mb-0 small fw-bold text-light">Advertise here!</p>
         </div>
       </div>
       <nav className="navbar p-0 navbar-expand-xl navbar-light flex-column border-bottom">
@@ -134,6 +133,11 @@ export const Navbar = () => {
                   className="navbar-icon"
                   icon={faInstagram}
                   title="Instagram"
+                ></FontAwesomeIcon>
+                <FontAwesomeIcon
+                  className="navbar-icon"
+                  icon={faRightFromBracket}
+                  onClick={() => localStorage.removeItem("token")}
                 ></FontAwesomeIcon>
               </div>
               {/* <ul className="navbar-nav d-flex position-absolute top-50 translate-middle align-items-center">

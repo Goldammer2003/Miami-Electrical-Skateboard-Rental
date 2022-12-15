@@ -66,6 +66,12 @@ def handle_signup():
 
     else: return jsonify ("Your account does already exist"),409
 
+@api.route ("/get-user-info",methods= ["GET"])
+@jwt_required()
+def getUserInfo():
+    currentUser=get_jwt_identity()
+    return jsonify (logged_in_as=currentUser),200 
+
 
 @api.route ("/signin", methods= ["POST"])
 def handle_singin():
