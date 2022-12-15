@@ -23,7 +23,7 @@ const injectContext = (PassedComponent) => {
     async function CheckToken() {
       const Token = localStorage.getItem("token");
       const Response = await fetch(
-        `${getStore().BACKEND_URL}/api/validate-user`,
+        `${state.store.BACKEND_URL}/api/validate-user`,
         {
           method: "GET",
           headers: {
@@ -40,7 +40,9 @@ const injectContext = (PassedComponent) => {
         state.actions.logoutFunction();
       } else {
         const Data = await Response.json();
-        state.actions.loginFunction;
+        state.actions.loginFunction();
+        console.log("api data", state.store.isLogin);
+
         return Data;
       }
     }
@@ -52,8 +54,9 @@ const injectContext = (PassedComponent) => {
        * you should do your ajax requests or fetch api requests here. Do not use setState() to save data in the
        * store, instead use actions, like this:
        **/
-
+      console.log("useEffect");
       CheckToken();
+
       state.actions.getMessage(); // <---- calling this function from the flux.js actions
     }, []);
 

@@ -1,11 +1,12 @@
 import { Context } from "../store/appContext";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 export const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { store, actions } = useContext(Context);
+  const Navigate = useNavigate();
   function handle_signin(e) {
     e.preventDefault();
     fetch(`${store.BACKEND_URL}/api/signin`, {
@@ -24,6 +25,9 @@ export const Signin = () => {
       })
       .catch((error) => console.log(error));
   }
+  useEffect(() => {
+    store.isLogin && Navigate("/");
+  }, []);
   return (
     <>
       <div className="position-relative overflow-hidden">
