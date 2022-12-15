@@ -13,8 +13,9 @@ export const Signup = () => {
   const [country, setCountry] = useState("");
   const { store, actions } = useContext(Context);
 
-  function handle_signup() {
-    fetch(`${store.BACKEND_URL}`, {
+  function handle_signup(e) {
+    e.preventDefault();
+    fetch(`${store.BACKEND_URL}/api/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -28,8 +29,14 @@ export const Signup = () => {
         zipcode: zipcode,
         country: country,
       }),
-    }).then((response) => response.json());
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => console.log(error));
   }
+
   console.log(email);
   return (
     <>
@@ -41,12 +48,13 @@ export const Signup = () => {
                 <a className="d-inline-block h6 mb-14" href="#"></a>
                 <h2 className="mb-8">Register to enjoy our greatest deals!</h2>
                 <p className="mb-10">Please, do not hesitate</p>
-                <form action="">
+                <form onSubmit={handle_signup}>
                   <input
                     onChange={(e) => setEmail(e.target.value)}
                     className="form-control form-control-lg mb-4"
                     type="email"
                     placeholder="john@example.com"
+                    required
                   ></input>
 
                   <input
@@ -54,24 +62,28 @@ export const Signup = () => {
                     className="form-control form-control-lg mb-4"
                     type="password"
                     placeholder="Password"
+                    required
                   ></input>
                   <input
                     onChange={(e) => setFirstname(e.target.value)}
                     className="form-control form-control-lg mb-4"
                     type="text"
                     placeholder="Firstname"
+                    required
                   />
                   <input
                     onChange={(e) => setLastname(e.target.value)}
                     className="form-control form-control-lg mb-4"
                     type="text"
                     placeholder="Lastname"
+                    required
                   />
                   <input
                     onChange={(e) => setAddress(e.target.value)}
                     className="form-control form-control-lg mb-4"
                     type="text"
                     placeholder="adress"
+                    required
                   />
 
                   <input
@@ -79,24 +91,28 @@ export const Signup = () => {
                     className="form-control form-control-lg mb-4"
                     type="text"
                     placeholder="city"
+                    required
                   />
                   <input
                     onChange={(e) => setState(e.target.value)}
                     className="form-control form-control-lg mb-4"
                     type="text"
                     placeholder="state"
+                    required
                   />
                   <input
                     onChange={(e) => setZipcode(e.target.value)}
                     className="form-control form-control-lg mb-4"
                     type="text"
                     placeholder="zipcode"
+                    required
                   />
                   <input
                     onChange={(e) => setCountry(e.target.value)}
                     className="form-control form-control-lg mb-4"
                     type="text"
                     placeholder="country"
+                    required
                   />
 
                   <div className="form-check" for="">
@@ -106,7 +122,7 @@ export const Signup = () => {
                       Cookies.
                     </label>
                   </div>
-                  <button className="mt-12 mt-md-16 btn btn-dark">
+                  <button className="mt-12 mt-md-16 btn btn-dark" type="submit">
                     JOIN Skatopia
                   </button>
                 </form>
