@@ -1,16 +1,36 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-
+import { Context } from "../store/appContext";
 export const Signup = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
+  const [zipcode, setZipcode] = useState("");
+  const [country, setCountry] = useState("");
+  const { store, actions } = useContext(Context);
+
   function handle_signup() {
-    fetch(
-      "https://3001-goldammer20-miamielectr-2gxkmhastf2.ws-eu78.gitpod.io/api/signup",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-      }
-    );
+    fetch(`${store.BACKEND_URL}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: email,
+        password: password,
+        firstname: firstname,
+        lastname: lastname,
+        adress: address,
+        city: city,
+        state: state,
+        zipcode: zipcode,
+        country: country,
+      }),
+    }).then((response) => response.json());
   }
+  console.log(email);
   return (
     <>
       <div className="position-relative overflow-hidden">
@@ -23,47 +43,57 @@ export const Signup = () => {
                 <p className="mb-10">Please, do not hesitate</p>
                 <form action="">
                   <input
+                    onChange={(e) => setEmail(e.target.value)}
                     className="form-control form-control-lg mb-4"
                     type="email"
                     placeholder="john@example.com"
                   ></input>
+
                   <input
+                    onChange={(e) => setPassword(e.target.value)}
                     className="form-control form-control-lg mb-4"
                     type="password"
                     placeholder="Password"
                   ></input>
                   <input
+                    onChange={(e) => setFirstname(e.target.value)}
                     className="form-control form-control-lg mb-4"
                     type="text"
                     placeholder="Firstname"
                   />
                   <input
+                    onChange={(e) => setLastname(e.target.value)}
                     className="form-control form-control-lg mb-4"
                     type="text"
                     placeholder="Lastname"
                   />
                   <input
+                    onChange={(e) => setAddress(e.target.value)}
                     className="form-control form-control-lg mb-4"
                     type="text"
                     placeholder="adress"
                   />
 
                   <input
+                    onChange={(e) => setCity(e.target.value)}
                     className="form-control form-control-lg mb-4"
                     type="text"
                     placeholder="city"
                   />
                   <input
+                    onChange={(e) => setState(e.target.value)}
                     className="form-control form-control-lg mb-4"
                     type="text"
                     placeholder="state"
                   />
                   <input
+                    onChange={(e) => setZipcode(e.target.value)}
                     className="form-control form-control-lg mb-4"
                     type="text"
                     placeholder="zipcode"
                   />
                   <input
+                    onChange={(e) => setCountry(e.target.value)}
                     className="form-control form-control-lg mb-4"
                     type="text"
                     placeholder="country"

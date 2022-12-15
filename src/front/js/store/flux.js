@@ -20,6 +20,9 @@ const getState = ({ getStore, getActions, setStore }) => {
         name: "Manuel",
         email: "mangobo@freenet.de",
       },
+
+      BACKEND_URL:
+        "https://3001-goldammer20-miamielectr-hxj6kt5ulk3.ws-eu79.gitpod.io", //This backend URL needs to be changed each time the repository is loaded from Github. Go to Port 3001 and take the new backend url from there
     },
     actions: {
       // Use getActions to call a function within a fuction
