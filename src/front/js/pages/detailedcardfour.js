@@ -221,7 +221,7 @@ export const Detailedcardfour = () => {
                   });
                   Navigate("/cart");
                 } else {
-                  Navigate("/signup");
+                  Navigate("/signin");
                 }
               }}
             >

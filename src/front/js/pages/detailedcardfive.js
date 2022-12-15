@@ -221,7 +221,7 @@ export const Detailedcardfive = () => {
                   });
                   Navigate("/cart");
                 } else {
-                  Navigate("/signup");
+                  Navigate("/signin");
                 }
               }}
             >

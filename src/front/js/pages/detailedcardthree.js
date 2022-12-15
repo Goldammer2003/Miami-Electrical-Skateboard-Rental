@@ -220,7 +220,7 @@ export const Detailedcardthree = () => {
                   });
                   Navigate("/cart");
                 } else {
-                  Navigate("/signup");
+                  Navigate("/signin");
                 }
               }}
             >
