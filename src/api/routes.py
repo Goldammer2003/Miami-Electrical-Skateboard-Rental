@@ -70,7 +70,10 @@ def handle_signup():
 @jwt_required()
 def getUserInfo():
     currentUser=get_jwt_identity()
-    return jsonify (logged_in_as=currentUser),200 
+    
+    user=User.query.get(currentUser)
+
+    return jsonify ({"name":user.firstname+" "+user.lastName,"email":user.email}),200 
 
 
 @api.route ("/signin", methods= ["POST"])

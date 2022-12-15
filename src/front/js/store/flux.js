@@ -30,6 +30,10 @@ const getState = ({ getStore, getActions, setStore }) => {
         getActions().changeColor(0, "green");
       },
 
+      updateUser: (email, name) => {
+        setStore({ user: { name: name, email: email } });
+      },
+
       logoutFunction: () => {
         setStore({ isLogin: false });
       },

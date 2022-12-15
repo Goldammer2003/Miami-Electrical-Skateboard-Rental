@@ -21,6 +21,7 @@ import React, { useState, useContext, useEffect } from "react";
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
+  console.log(store);
   return (
     <section className="position-relative">
       <div className="py-2 bg-info">

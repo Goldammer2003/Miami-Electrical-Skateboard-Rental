@@ -46,8 +46,34 @@ const injectContext = (PassedComponent) => {
         return Data;
       }
     }
+    async function getUserData(state) {
+      const Token = localStorage.getItem("token");
+      const Response = await fetch(
+        `${state.store.BACKEND_URL}/api/get-user-info`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + Token,
+          },
+        }
+      );
+      if (!Response.ok) {
+        throw Error("There was a problem in the login request");
+      } else if (Response.status == 403) {
+        throw Error("Missing or invalid Token");
+      } else if (Response.status == 401 || Response.status == 422) {
+        state.actions.logoutFunction();
+      } else {
+        const Data = await Response.json();
+        state.actions.updateUser(Data.email, Data.name);
+        console.log(Data);
+        return Data;
+      }
+    }
 
     useEffect(() => {
+      getUserData(state);
       /**
        * EDIT THIS!
        * This function is the equivalent to "window.onLoad", it only runs once on the entire application lifetime
@@ -58,7 +84,7 @@ const injectContext = (PassedComponent) => {
       CheckToken();
 
       state.actions.getMessage(); // <---- calling this function from the flux.js actions
-    }, [state.store.isLogin]);
+    }, [state.store]);
 
     // The initial value for the context is not null anymore, but the current state of this component,
     // the context will now have a getStore, getActions and setStore functions available, because they were declared
