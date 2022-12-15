@@ -1,7 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
+import React, { useState, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Signin = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { store, actions } = useContext(Context);
+  function handle_signin(e) {
+    e.preventDefault();
+    fetch(`${store.BACKEND_URL}/api/signin`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        console.log(result);
+        localStorage.setItem("token", result.token);
+        //Navigate("/signin");
+      })
+      .catch((error) => console.log(error));
+  }
   return (
     <>
       <div className="position-relative overflow-hidden">
@@ -14,16 +36,21 @@ export const Signin = () => {
                   Sign In to see your Bookings at our Website from everywhere!
                 </h2>
                 <p className="mb-10">Please, do not hesitate</p>
-                <form action="">
+                <form onSubmit={handle_signin}>
                   <input
                     className="form-control form-control-lg mb-4"
-                    type="text"
+                    type="email"
                     placeholder="john@example.com"
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                   ></input>
+
                   <input
                     className="form-control form-control-lg mb-4"
                     type="password"
                     placeholder="Password"
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
                   ></input>
 
                   <div className="form-check" for="">
@@ -34,8 +61,8 @@ export const Signin = () => {
                       </Link>
                     </label>
                   </div>
-                  <button className="mt-12 mt-md-16 btn btn-dark">
-                    JOIN Skatopia
+                  <button className="mt-12 mt-md-16 btn btn-dark" type="submit">
+                    Sign In
                   </button>
                 </form>
               </div>

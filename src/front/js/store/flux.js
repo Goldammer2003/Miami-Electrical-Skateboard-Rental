@@ -30,6 +30,12 @@ const getState = ({ getStore, getActions, setStore }) => {
         getActions().changeColor(0, "green");
       },
 
+      logoutFunction: () => {
+        setStore({ isLogin: false });
+      },
+      loginFunction: () => {
+        setStore({ isLogin: true });
+      },
       updateCart: (data) => {
         let savingDate = getStore().cartList;
 

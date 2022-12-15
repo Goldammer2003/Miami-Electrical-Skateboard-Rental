@@ -79,7 +79,10 @@ def handle_singin():
     else: 
         access_token=create_access_token(identity = user.id)
         return jsonify ({"token":access_token,"userid":user.id})
-
-
+@api.route ("/validate-user",methods= ["GET"])
+@jwt_required()
+def validate_User():
+    currentUser=get_jwt_identity()
+    return jsonify (logged_in_as=currentUser),200 
 if __name__ == "__main__":
     app.run()

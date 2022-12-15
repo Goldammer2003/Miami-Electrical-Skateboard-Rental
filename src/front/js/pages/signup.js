@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 export const Signup = () => {
   const [email, setEmail] = useState("");
@@ -13,6 +13,7 @@ export const Signup = () => {
   const [country, setCountry] = useState("");
   const { store, actions } = useContext(Context);
 
+  const Navigate = useNavigate();
   function handle_signup(e) {
     e.preventDefault();
     fetch(`${store.BACKEND_URL}/api/signup`, {
@@ -33,6 +34,7 @@ export const Signup = () => {
       .then((response) => response.json())
       .then((result) => {
         console.log(result);
+        Navigate("/signin");
       })
       .catch((error) => console.log(error));
   }
