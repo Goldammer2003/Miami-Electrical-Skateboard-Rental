@@ -207,7 +207,7 @@ export const Detailedcardthree = () => {
             />
 
             <button
-              className="btn btn-primary "
+              className="btn btn-primary m-3 "
               onClick={() => {
                 if (store.isLogin) {
                   actions.updateCart({
