@@ -5,3 +5,8 @@
 .carousel-item {
   height: 700px;
 }
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: black !important;
+}
